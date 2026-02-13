@@ -1,9 +1,12 @@
+import pytest
 from utilities.api_client import APIClient
 from utilities.schema import products_schema
 from jsonschema import validate
 
 client = APIClient()
 
+@pytest.mark.smoke
+@pytest.mark.regression
 def test_get_all_products():
     response = client.get("/productsList")
 

@@ -1,7 +1,9 @@
+import pytest
 from utilities.api_client import APIClient
 
 client = APIClient()
 
+@pytest.mark.regression
 def test_add_to_cart():
     payload = {
         "product_id": 1,
@@ -14,6 +16,7 @@ def test_add_to_cart():
     assert "Page not found" in response.text
 
 
+@pytest.mark.regression
 def test_delete_cart():
     payload = {
         "product_id": 1

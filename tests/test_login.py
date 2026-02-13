@@ -1,3 +1,4 @@
+import pytest
 from utilities.api_client import APIClient
 from utilities.config import EMAIL, PASSWORD
 from utilities.schema import login_schema
@@ -54,6 +55,8 @@ def ensure_valid_user(email, password):
 
     assert False, f"Unexpected createAccount response: {create_data}"
 
+@pytest.mark.smoke
+@pytest.mark.regression
 def test_valid_login():
     ensure_valid_user(EMAIL, PASSWORD)
 
@@ -74,6 +77,7 @@ def test_valid_login():
     assert "User exists" in data["message"]
 
 
+@pytest.mark.regression
 def test_invalid_login():
     payload = {
         "email": "wrong@yopmail.com",
@@ -88,4 +92,4 @@ def test_invalid_login():
 
     assert data["responseCode"] == 404
     assert "User not found" in data["message"]
-    
+
