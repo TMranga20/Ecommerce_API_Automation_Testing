@@ -1,0 +1,10 @@
+{
+  "valid_user": {
+    "email": "testuser_api@yopmail.com",
+    "password": "Test@123"
+  },
+  "invalid_user": {
+    "email": "wrong@yopmail.com",
+    "password": "wrong123"
+  }
+}
