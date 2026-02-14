@@ -1,29 +1,39 @@
-# 🛒 E-Commerce API Automation Testing
+# 🛒 E-Commerce API Automation Testing Framework
 
 ![Python](https://img.shields.io/badge/Python-3.10+-blue?logo=python)
 ![Pytest](https://img.shields.io/badge/Pytest-Framework-green?logo=pytest)
 ![Requests](https://img.shields.io/badge/Requests-HTTP-orange)
 ![Allure](https://img.shields.io/badge/Allure-Reports-purple)
-![API Testing](https://img.shields.io/badge/API-Automation-red)
+![API](https://img.shields.io/badge/API-Automation-red)
+![Status](https://img.shields.io/badge/Tests-Passing-brightgreen)
 
 ---
 
 ## 📌 Project Overview
 
-Automated REST API testing for an E-Commerce application using **Python, Pytest, and Requests**.
-The framework validates **status codes, response structure, data integrity**, and generates **HTML & Allure interactive reports**.
+This project implements an **API Automation Testing Framework** for an E-Commerce application using:
 
+* **Python**
+* **Pytest**
+* **Requests**
+* **JSON Schema Validation**
+* **Allure Reporting**
+
+The framework validates **status codes, response body, schema, and data integrity**, and generates **HTML and Allure interactive reports**.
+
+Reference APIs: https://automationexercise.com/api
 ---
 
-## 🔧 Tech Stack
+## 🧰 Tech Stack
 
-* Python
+* Python 3.x
 * Pytest
 * Requests
-* JSON Schema Validation
+* JSON Schema
 * Allure Reports
-* HTML Reports
+* Pytest HTML Reports
 * VS Code
+* Git & GitHub
 
 ---
 
@@ -38,10 +48,12 @@ ecommerce_api_automation/
 │
 │── utils/
 │   ├── api_client.py
-│   ├── test_data.json
-│   └── schemas.py
+│   ├── config.py
+│   ├── schemas.py
+│   └── test_data.json
 │
 │── allure-results/
+│── reports/
 │── pytest.ini
 │── requirements.txt
 │── README.md
@@ -49,18 +61,26 @@ ecommerce_api_automation/
 
 ---
 
-## 🚀 Features
+## 🚀 Key Features
 
 ✔ Reusable API client for GET, POST, DELETE requests
+
 ✔ Automated Login, Products, and Cart APIs
-✔ JSON schema validation
+
+✔ JSON schema validation for response structure
+
+✔ Data-driven testing using external JSON data
+
 ✔ Smoke & Regression test tagging
+
 ✔ HTML report generation
+
 ✔ Allure interactive dashboard with:
 
-* Feature & severity grouping
+* Feature grouping
+* Severity levels
 * Step logging
-* Request & response attachments
+* Request/Response attachments
 
 ---
 
@@ -88,7 +108,7 @@ pip install -r requirements.txt
 
 ---
 
-## ▶️ Run Tests
+## ▶️ Test Execution
 
 ### Run All Tests
 
@@ -106,13 +126,13 @@ pytest -m smoke
 
 ## 📊 HTML Report
 
-Generated automatically after execution:
+Generated after execution:
 
 ```
 reports/report.html
 ```
 
-Open in browser to view test results.
+Open in a browser to view test results.
 
 ---
 
@@ -130,23 +150,21 @@ pytest --alluredir=allure-results
 allure serve allure-results
 ```
 
-This provides:
+Provides:
 
-* Test execution summary
+* Execution summary
 * Step-level logs
-* Request/response payloads
+* Request & response payloads
 * Severity & feature grouping
 
 ---
 
-## 🧪 Sample APIs Covered
+## 🧪 APIs Covered
 
-* POST `/verifyLogin` → User login validation
+* POST `/verifyLogin` → Validate user login
 * GET `/productsList` → Fetch all products
 * POST `/addToCart` → Add product to cart
 * DELETE `/removeFromCart` → Remove product from cart
-
-Reference: https://automationexercise.com/api
 
 ---
 
@@ -157,7 +175,7 @@ Configured in `pytest.ini`:
 * `smoke` → Critical test cases
 * `regression` → Full test suite
 
-Run specific marker:
+Run by marker:
 
 ```bash
 pytest -m regression
@@ -183,8 +201,4 @@ allure-pytest
 QA Automation Engineer (Fresher)
 🔗 GitHub: https://github.com/TMranga20
 
----
-
-
-```
 ```
