@@ -4,8 +4,11 @@
 ![Pytest](https://img.shields.io/badge/Pytest-Framework-green?logo=pytest)
 ![Requests](https://img.shields.io/badge/Requests-HTTP-orange)
 ![Allure](https://img.shields.io/badge/Allure-Reports-purple)
-![API](https://img.shields.io/badge/API-Automation-red)
-![Status](https://img.shields.io/badge/Tests-Passing-brightgreen)
+![API Automation](https://img.shields.io/badge/API-Automation-red)
+![Tests](https://img.shields.io/badge/Tests-Passing-brightgreen)
+![Repo Size](https://img.shields.io/github/repo-size/TMranga20/Ecommerce_API_Automation_Testing)
+![Git](https://img.shields.io/badge/Git-Version%20Control-orange?logo=git)
+![GitHub](https://img.shields.io/badge/GitHub-Repository-black?logo=github)
 
 ---
 
