@@ -202,6 +202,5 @@ allure-pytest
 
 **Mohan Ranga Talari**
 QA Automation Engineer (Fresher)
-🔗 GitHub: https://github.com/TMranga20
 
 ```
